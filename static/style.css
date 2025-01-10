@@ -1,0 +1,104 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Atur font global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Warna latar belakang halaman */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header utama */
+h1 {
+    text-align: center;
+    background-color: #4caf50; /* Warna hijau */
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+/* Kontainer utama */
+.container {
+    max-width: 800px; /* Lebar maksimal kontainer */
+    margin: 30px auto; /* Tengah secara horizontal */
+    background: white;
+    padding: 20px;
+    border-radius: 8px; /* Membuat sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Jarak antar elemen form */
+}
+
+form label {
+    font-weight: bold;
+    color: #555;
+}
+
+form input,
+form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Membuat sudut input membulat */
+    font-size: 16px;
+    width: 100%; /* Input dan tombol menyesuaikan lebar kontainer */
+}
+
+form button {
+    background-color: #4caf50; /* Warna hijau */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animasi saat hover */
+}
+
+form button:hover {
+    background-color: #45a049; /* Warna hijau lebih gelap saat hover */
+}
+
+/* Grafik */
+iframe {
+    width: 100%;
+    height: 600px; /* Tinggi iframe untuk grafik */
+    border: none;
+    margin-top: 20px;
+}
+
+/* Prediksi Hari Berikutnya */
+.next-day {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f1f8e9; /* Hijau muda */
+    border: 1px solid #dcedc8;
+    border-radius: 5px;
+}
+
+.next-day h2 {
+    margin-bottom: 10px;
+    color: #388e3c;
+}
+
+.next-day p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #333; /* Warna latar belakang footer */
+    color: white;
+    font-size: 14px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Harga Crypto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <h1>Prediksi Harga Cryptocurrency</h1>
+
+    <!-- Kontainer utama -->
+    <div class="container">
+        <!-- Form Input -->
+        <form action="/" method="POST">
+            <label for="symbol">Simbol Cryptocurrency (misal: ETH-USD):</label>
+            <input type="text" id="symbol" name="symbol" placeholder="Masukkan simbol (contoh: BTC-USD)" required>
+
+            <label for="start_date">Tanggal Mulai (YYYY-MM-DD):</label>
+            <input type="date" id="start_date" name="start_date" required>
+
+            <label for="end_date">Tanggal Akhir (YYYY-MM-DD):</label>
+            <input type="date" id="end_date" name="end_date" required>
+
+            <button type="submit">Prediksi Harga</button>
+        </form>
+
+        <!-- Grafik -->
+        {% if plot_url %}
+        <h2>Grafik Prediksi Harga</h2>
+        <iframe src="{{ url_for('static', filename=plot_url) }}"></iframe>
+        {% endif %}
+
+        <!-- Prediksi Hari Berikutnya -->
+        {% if next_day_prediction %}
+        <div class="next-day">
+            <h2>Prediksi Harga untuk Hari Berikutnya</h2>
+            <p>Harga diperkirakan: <strong>{{ next_day_prediction | round(2) }} USD</strong></p>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Djoko Bayu A
+    </footer>
+</body>
+</html>
